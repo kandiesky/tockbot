@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tock Bot - Olá</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/tobbot.min.css">
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/js/select2.min.js"></script>
+    <script src="js/bot.js"></script>
+</head>
+<body>
+    <header>
+        <p class="bot-img" alt="(Tob)"></p>
+        <p class="bot-msg">Clique no botão abaixo para iniciar</p>
+    </header>
+    <main>
+        <a id="home" onclick="location.assign('https://okituke.com.br/')" class="btn">CASA</a>
+        <a id="start" class="btn btn1">INICIAR</a>
+        <div class="input-boxes" style="display: none;">
+            <div style="display: none;" class="estado">
+                <select data-placeholder="Estado">
+                    <option selected></option>
+                </select>
+            </div>
+            <div style="display: none;" class="cidade">
+                <select name="select" data-placeholder="Cidade">
+                    <option selected></option>
+                </select>
+            </div>
+            <div style="display: none;" class="bairro">
+                <select name="select" data-placeholder="Bairro">
+                    <option selected></option>
+                </select>
+            </div>
+      </div>
+        <a id="btn-con" class="btn" style="display: none;" href="#">ANUNCIAR!</a>
+        <a id="btn-bm" class="btn" style="display: none;" href="#">IR PARA RESULTADOS</a>
+        <a id="btn-reset" onclick="location.reload(false)" class="btn" style="display: none;" href="#">VOLTAR</a>
+      <div style="display: none;" class="preloader">
+        <img src="assets/loading.gif" alt="(Carregando...)">
+        <p>Carregando...</p>
+      </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,86 @@
+/* Fonte */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300i,400,700&display=swap');
+/* Variáveis */
+%width{
+    min-width: 225px;
+    width: 85vw;
+    max-width: 450px;
+}
+/* Elementos base */
+body{
+    box-sizing: border-box;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60vh 40vh;
+    align-content: start;
+    justify-items: center;
+    font-family: 'Roboto', sans-serif, 'Segoe UI';
+}
+header{
+    display: grid;
+    grid-template-rows: minmax(45vh,auto) 1fr;
+    justify-content: center;
+    align-content: center;
+}
+main{
+    text-align: center;
+    @extend %width;
+    margin-top: 1.8rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: .3rem;
+    grid-template-rows: repeat(auto-fill, 40px);
+}
+%btn{
+    box-sizing: border-box;
+    border: .75rem solid #b3b0a9;
+    margin: 0;
+    border-radius: 5px;
+    color: black;
+    text-decoration: none;
+    background: #b3b0a9;
+    cursor: pointer;
+}
+select{
+    @extend %width;
+}
+p{
+    overflow-wrap: normal; 
+    margin: .1rem;
+}
+/* Classes */
+.bot-msg{
+    @extend %width;
+    user-select: none;
+    margin-top: 0;
+    text-align: justify;
+    max-height: auto;
+    background: #e3e5e1;
+    font-size: .95rem;
+    border-radius: 15px;
+    padding: .8rem;
+    margin-block-end: .2rem;
+}
+.bot-img{
+    margin: 0;
+    background-image: url(../assets/Tob.gif);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;    
+}
+.input-boxes{
+    text-align: center;
+}
+
+.preloader{
+    user-select: none;
+    text-align: center;
+}
+.btn-div{
+    padding: 0 1rem;
+}
+.btn{
+    @extend %btn;
+}
+/* Animações */
