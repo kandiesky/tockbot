@@ -6,24 +6,28 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tock Bot - Olá</title>
     <!-- CSS -->
-    <link rel="stylesheet" href="css/tobbot.min.css">
+    <link rel="stylesheet" href="css/tobbot.min.css?v=022019">
     <!-- JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/js/select2.min.js"></script>
-    <script src="js/bot.js"></script>
+    <script src="js/bot.js?v=022019"></script>
 </head>
 <body>
     <header>
         <p class="bot-img" alt="(Tob)"></p>
-        <p class="bot-msg">Clique no botão abaixo para iniciar</p>
     </header>
     <main>
-        <a id="home" onclick="location.assign('https://okituke.com.br/')" class="btn">CASA</a>
-        <a id="start" class="btn btn1">INICIAR</a>
+        <a id="start" class="btn">INICIAR O TOCK BOT</a>
+        <a id="home" onclick="location.assign('https://okituke.com.br/')" class="btn">LEVE O TOB PARA CASA</a>
         <div class="input-boxes" style="display: none;">
             <div style="display: none;" class="estado">
                 <select data-placeholder="Estado">
+                    <option selected></option>
+                </select>
+            </div>
+            <div style="display: none;" class="regiao">
+                <select name="select" data-placeholder="Região">
                     <option selected></option>
                 </select>
             </div>
@@ -34,6 +38,11 @@
             </div>
             <div style="display: none;" class="bairro">
                 <select name="select" data-placeholder="Bairro">
+                    <option selected></option>
+                </select>
+            </div>
+            <div style="display: none;" class="segmento">
+                <select name="select" data-placeholder="Segmento">
                     <option selected></option>
                 </select>
             </div>
