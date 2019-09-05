@@ -193,16 +193,13 @@ $(document).ready(function() {
     $(inputBairro).on('change', function () {
         if(inputBairro.val() != ""){
             let bairro = inputBairro.val();
-            $('.input-boxes').hide(0);
-            $('.bairro').fadeOut(0, function(){
-                    $('#btn-con').attr("href", "http://okituke.com.br/okituke/form-cadastro.php?segmento=avbnsdobrasil").fadeIn(0);
-                    $('#btn-reset').fadeIn(1500);
-            });
             msg(audio, "TOBI - Obrigado.mp3");
+            $('.input-boxes').hide(0);
+            $('.bairro').fadeOut(3200);
             $(audio).one("ended", function(){
                 setTimeout(() => {
                     location.assign('http:\/\/okituke.com.br/okituke/redeokituke/segmentos.php?link=okituke&bairro='+bairro);
-                }, 1000);
+                }, 800);
             });
         }
     });

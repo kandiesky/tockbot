@@ -9,6 +9,16 @@ main, select, .bot-msg {
 }
 
 /* Elementos base */
+html {
+  height: 94vh;
+  min-height: 480px;
+  width: 30vw;
+  min-width: 360px;
+  display: block;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+}
+
 body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -17,8 +27,8 @@ body {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: 55vh 45vh;
-      grid-template-rows: 55vh 45vh;
+  -ms-grid-rows: minmax(415px, calc(86vh - 110.11px)) 1fr;
+      grid-template-rows: minmax(415px, calc(86vh - 110.11px)) 1fr;
   -ms-flex-line-pack: start;
       align-content: start;
   justify-items: center;
@@ -37,12 +47,11 @@ header {
 main {
   text-align: center;
   justify-items: center;
-  margin-top: 1.8rem;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  grid-gap: .3rem;
+  grid-gap: .125rem;
   -ms-grid-rows: (40px)[auto-fill];
       grid-template-rows: repeat(auto-fill, 40px);
 }
@@ -96,13 +105,27 @@ p {
 }
 
 .preloader {
+  height: 150px;
+  overflow: hidden;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  text-align: center;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 2fr 1fr;
+      grid-template-rows: 2fr 1fr;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  text-align: center;
-  overflow: hidden;
-  position: fixed;
+}
+
+.preloader img {
+  height: 75%;
 }
 
 .btn-div {

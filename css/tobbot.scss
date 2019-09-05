@@ -7,12 +7,21 @@
     max-width: 450px;
 }
 /* Elementos base */
+html{
+    height: 94vh;
+    min-height: 480px;
+    width: 30vw;
+    min-width: 360px;
+    display: block;
+    overflow-y: hidden;
+    scrollbar-width: thin;
+}
 body{
     box-sizing: border-box;
     margin: 0;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 55vh 45vh;
+    grid-template-rows: minmax(415px,calc(86vh - 110.11px)) 1fr;
     align-content: start;
     justify-items: center;
     font-family: 'Roboto', sans-serif, 'Segoe UI';
@@ -25,10 +34,9 @@ main{
     text-align: center;
     justify-items: center;
     @extend %width;
-    margin-top: 1.8rem;
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: .3rem;
+    grid-gap: .125rem;
     grid-template-rows: repeat(auto-fill, 40px);
 }
 %btn{
@@ -75,10 +83,18 @@ p{
 }
 
 .preloader{
-    user-select: none;
-    text-align: center;
+    height: 150px;
     overflow: hidden;
-    position: fixed;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr;
+    user-select: none;
+    img{
+        height: 75%;
+    }
 }
 .btn-div{
     padding: 0 1rem;
