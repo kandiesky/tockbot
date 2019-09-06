@@ -27,8 +27,8 @@ body {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: minmax(415px, calc(86vh - 110.11px)) 1fr;
-      grid-template-rows: minmax(415px, calc(86vh - 110.11px)) 1fr;
+  -ms-grid-rows: minmax(420px, calc(86vh - 110.11px)) 1fr;
+      grid-template-rows: minmax(420px, calc(86vh - 110.11px)) 1fr;
   -ms-flex-line-pack: start;
       align-content: start;
   justify-items: center;

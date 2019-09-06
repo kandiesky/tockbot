@@ -66,15 +66,18 @@ $(document).ready(function() {
                             msg(audio, "TOBI - Falha1.mp3");
 
                             $('.preloader').fadeOut(500, function(){
-                                $('.estado').fadeOut(0, function(){
-                                    $('#btn-con').attr("href", "http://okituke.com.br/okituke/form-cadastro.php?segmento=avbnsdobrasil&estado="+estado).fadeIn(0, function(){
-                                        $('#btn-reset').fadeIn(1500);
-                                    });
-                                })
+                                $(audio).one("ended", function(){
+                                    setTimeout(() => {
+                                        $('.estado').fadeIn(0, function(){
+                                            $('#btn-con').attr("href", "http://okituke.com.br/okituke/form-cadastro.php?segmento=avbnsdobrasil&estado="+estado).fadeIn(0);
+                                        })
+                                    }, 500);
+                                });
                             })
                         }else{
                             //audio sucesso1
                             msg(audio, "TOBI - Sucesso1.mp3");
+                            $('#btn-con').fadeOut(0);
                             $('.preloader').fadeOut(600, function(){
                                 r.forEach(item => {
                                     let opt = new Option(item[1], item[2])
@@ -113,15 +116,18 @@ $(document).ready(function() {
                             //Audio falha2
                             msg(audio, "TOBI - Falha2.mp3");
                             $('.preloader').fadeOut(500, function(){
-                                $('.regiao').fadeOut(0, function(){
-                                    $('#btn-con').attr("href", "http://okituke.com.br/okituke/form-cadastro.php?segmento=avbnsdobrasil&regiao="+regiao).fadeIn(0, function(){
-                                        $('#btn-reset').fadeIn(1500);
-                                    });
-                                })
+                                $(audio).one("ended", function(){
+                                    setTimeout(() => {
+                                        $('.regiao').fadeIn(0, function(){
+                                            $('#btn-con').attr("href", "http://okituke.com.br/okituke/form-cadastro.php?segmento=avbnsdobrasil&regiao="+regiao).fadeIn(0);
+                                        })
+                                    }, 500);
+                                });
                             })
                         }else{
                             //audio sucesso2
                             msg(audio, "TOBI - Sucesso2.mp3");
+                            $('#btn-con').fadeOut(0);
                             $('.preloader').fadeOut(600, function(){
                                 r.forEach(item => {
                                     let opt = new Option(item[2], item[3])
@@ -158,16 +164,21 @@ $(document).ready(function() {
                     dataType: "json",
                     success: function (r) {
                         if(r.length == 0){
+                            //Audio falha 3
                             msg(audio, "TOBI - Falha3.mp3");
                             $('.preloader').fadeOut(600, function(){
-                                $('.cidade').fadeOut(0, function(){
-                                    $('#btn-con').attr("href", "http://okituke.com.br/okituke/form-cadastro.php?segmento=avbnsdobrasil&cidade="+cidade).fadeIn(0, function(){
-                                        $('#btn-reset').fadeIn(1500);
-                                    });
-                                })
+                                $(audio).one("ended", function(){
+                                    setTimeout(() => {
+                                        $('.cidade').fadeIn(0, function(){
+                                            $('#btn-con').attr("href", "http://okituke.com.br/okituke/form-cadastro.php?segmento=avbnsdobrasil&cidade="+cidade).fadeIn(0);
+                                        })
+                                    }, 500);
+                                });
                             })
                         }else{
+                            //Audio sucesso 3
                             msg(audio, "TOBI - Sucesso3.mp3");
+                            $('#btn-con').fadeOut(0);
                             $('.preloader').fadeOut(300, function(){
                                 r.forEach(item => {
                                     let opt = new Option(item[3], item[4])

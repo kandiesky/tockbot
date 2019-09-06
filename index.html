@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tock Bot - Olá</title>
     <!-- CSS -->
-    <link rel="stylesheet" href="css/tobbot.min.css?v=01002">
+    <link rel="stylesheet" href="css/tobbot.min.css?v=02000">
     <!-- JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/js/select2.min.js"></script>
-    <script src="js/bot.js?v=01002"></script>
+    <script src="js/bot.js?v=02000"></script>
 </head>
 <body>
     <header>
@@ -19,7 +19,7 @@
     </header>
     <main>
         <a id="start" class="btn">INICIAR O TOCK BOT</a>
-        <a id="home" onclick="location.assign('https://okituke.com.br/')" class="btn">LEVE O TOB PARA CASA</a>
+        <a id="home" onclick="location.assign('https:\/\/okituke.com.br/')" class="btn">LEVE O TOB PARA CASA</a>
         <div class="input-boxes" style="display: none;">
             <div style="display: none;" class="estado">
                 <select data-placeholder="Estado">
@@ -32,12 +32,12 @@
                 </select>
             </div>
             <div style="display: none;" class="cidade">
-                <select name="select" data-placeholder="Cidade">
+                <select name="select" data-placeholder="Cidade ou Bairro">
                     <option selected></option>
                 </select>
             </div>
             <div style="display: none;" class="bairro">
-                <select name="select" data-placeholder="Bairro">
+                <select name="select" data-placeholder="Local">
                     <option selected></option>
                 </select>
             </div>
@@ -50,8 +50,8 @@
         <a id="btn-con" class="btn" style="display: none;" href="#">ANUNCIAR!</a>
         <a id="btn-reset" onclick="location.reload(false)" class="btn" style="display: none;" href="#">VOLTAR</a>
       <div style="display: none;" class="preloader">
-        <img src="assets/loading.gif" alt="(Carregando...)">
-        <p>Carregando...</p>
+        <img src="assets/loading.gif" alt="(Pensando...)">
+        <p>Pensando...</p>
       </div>
     </main>
 </body>
