@@ -1,5 +1,5 @@
-/* Fonte */
-@import url('https://fonts.googleapis.com/css?family=Roboto:300i,400,700&display=swap');
+/* Variáveis Okituké */
+@import "../../css/okituke";
 /* Variáveis */
 %width{
     min-width: 225px;
@@ -24,7 +24,7 @@ body{
     grid-template-rows: minmax(420px,calc(86vh - 110.11px)) 1fr;
     align-content: start;
     justify-items: center;
-    font-family: 'Roboto', sans-serif, 'Segoe UI';
+    font-family: $fonte-sistema;
 }
 header{
     display: flex;
@@ -41,12 +41,12 @@ main{
 }
 %btn{
     box-sizing: border-box;
-    border: .75rem solid #f68e38;
+    border: .75rem solid $orange-700;
     margin: 0;
     border-radius: 5px;
-    color: white;
+    color: $fonte-sistema-cor-clara;
     text-decoration: none;
-    background: #f68e38;
+    background: $orange-700;
     cursor: pointer;
     width: 85%;
 }
